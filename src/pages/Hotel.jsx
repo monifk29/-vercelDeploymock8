@@ -47,7 +47,7 @@ const Hotel = () => {
         {
           hotels.map((item) => (
             <div key={item.id}>
-              <img src="https://stylesatlife.com/wp-content/uploads/2019/12/latest-bed-designs-in-2020.jpg.webp" alt="" />
+              <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWwlMjByb29tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" />
 
               <h3>Adult:  {item.no_of_persons}</h3>
               <h3>Capacity:  {item.capacity}</h3>

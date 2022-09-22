@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 
 
 const Admin = () => {
-//   const [data,setData] = useState([]);
+  const [data,setData] = useState([]);
   const dispatch = useDispatch();
   const hotels = useSelector((state) => state.hotels)
 
