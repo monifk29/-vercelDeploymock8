@@ -11,6 +11,22 @@ const Hotel = () => {
 
   const[data, setData] = useState(hotels)
 
+
+  const desc = () => {
+    let sortdata = hotels.sort((a, b) => {
+      return a.cost - b.cost;
+    });
+
+    setData([...sortdata]);
+  }
+  const asc = () => {
+    let sortdata = hotels.sort((a, b) => {
+      return b.cost - a.cost;
+    });
+
+    setData([...sortdata]);
+  }
+
   useEffect(() => {
     dispatch(getData())
 
@@ -24,8 +40,8 @@ const Hotel = () => {
     <div>
       <div>
         <label>SORT BY</label>
-        <Button >Low to High </Button>
-        <br /><Button >High to Low </Button>
+        <Button onClick = {asc}>Low to High </Button>
+        <br /><Button onClick={desc} >High to Low </Button>
       </div>
       <div style={{display:"flex", justifyContent : "space-around", gap: "20px"}}>
         {
